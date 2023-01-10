@@ -1,0 +1,128 @@
+/* Import Pattaya google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+:root {
+    --fontColor: #ffffff;
+    --h1Color: #85b7ff;
+    --buttonBG: #e90021;
+    --buttonHoverBG: #7a101f;
+}
+
+
+body {
+    font-family: 'Pattaya', sans-serif;
+    color: var(--fontColor);
+    font-size: 18pt;
+
+    background-image: url(../assets/background.svg);
+    background-size: cover;
+}
+
+#root {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+#logo {
+    margin: 0 auto;
+    width: 150px;
+    display: block;
+
+    /* Logo animation */
+    animation: rotateLogoAnimate 900ms infinite;
+    -webkit-animation: rotateLogoAnimate 900ms infinite;
+    -moz-animation: rotateLogoAnimate 900ms infinite;
+    -o-animation: rotateLogoAnimate 900ms infinite;
+}
+
+@keyframes rotateLogoAnimate {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        -moz-transform: rotate(15deg);
+        -o-transform: rotate(15deg);
+    }
+
+}
+
+h1 {
+    color: var(--h1Color);
+    font-size: 24pt;
+}
+
+#heroDiv {
+    background-image: url(../assets/hero.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    height: 250px;
+    width: 100%;  
+}
+
+#clocksContainer .clock {
+    flex: 1;
+}
+
+#clocksContainer .clockTimer {
+    font-size: 20pt;
+}
+
+#clocksContainer .clockTimer .digits {
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Reset buttons */
+#clocksContainer button {
+    /* Reset default button style */
+    all: unset;
+    
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    background-color: var(--buttonBG);
+
+    /* Tranisition animation for button hover */
+    transition: all ease-out 250ms;
+    -webkit-transition: all ease-out 250ms;
+    -moz-transition: all ease-out 250ms;
+    -o-transition: all ease-out 250ms;
+}
+
+#clocksContainer button:hover {
+    background-color: var(--buttonHoverBG);
+}
+
+/* Breakpoint - width of 950px */
+@media (max-width: 950px) {
+    #clocksContainer {
+        flex-direction: column;
+    }
+
+    #mainText {
+        flex-direction: column;
+        text-align: center;
+    }
+}
