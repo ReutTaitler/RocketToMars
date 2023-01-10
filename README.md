@@ -1,6 +1,5 @@
 # RocketToMars
 
-** need to run with code editor or local web server
+** Need to run with a code editor or local web server
 
-** the website build with React - using CDN links
-
+** This page was built with React - using CDN links
